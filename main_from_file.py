@@ -49,6 +49,15 @@ def main():
             co[2] = co[2].strip()
             results.append((co[0], co[1], co[2]))
     # Aldo,L(2020)
+    # Error handling functionality
+    try:
+        open('polygon.csv')
+    except:
+        print('cannot get to this file')
+    else:
+        print('polygon file has been opened successfully')
+    finally:
+        print('next step?')
 
     polygon = list(results)
     len_polygon = len(polygon)
@@ -64,7 +73,7 @@ def main():
         _polygon.append([float(polygon[i][1]), float(polygon[i][2])])
 
     print('read input.csv')
-    # Read the points of polygon from csv file
+    # Read the points from csv file
     with open('input.csv', 'r') as f2:
         results2 = []
         for line in f2:
@@ -72,6 +81,15 @@ def main():
                 co2 = line.split(',')
                 co2[2] = co2[2].strip()
                 results2.append((int(co[0]), float(co2[1]), float(co2[2])))
+    # Aldo,L(2020)
+    try:
+        open('input.csv')
+    except:
+        print('cannot get to this file')
+    else:
+        print('point file has been opened successfully')
+    finally:
+        print('next step?')
 
     points = list(results2)
     len_points = len(points)
@@ -205,4 +223,10 @@ def main():
 if __name__ == '__main__':
     main()
 
-
+#Reference
+#Read CSV:
+#Aldo, L. (2020). Week 3 - Python Data Structures, IDE and Debugger, Lecture Material, 21.
+#MBR:
+#Aldo, L. (2020). Week 4 - Object-Oriented Programming, Lecture Material, 4 - 6.
+#RCA/Output:
+#Mian, Q. (2021). Python3 ray method to determine whether a point is within a polygon. Retrieved from https://www.mianshigee.com/note/detail/51088gsb/
