@@ -35,6 +35,7 @@ def max_y(y1):
         if y_mbr > res:
             res = y_mbr
     return res
+# Aldo,L(2020)
 
 
 def main():
@@ -47,6 +48,7 @@ def main():
             co = line.split(',')
             co[2] = co[2].strip()
             results.append((co[0], co[1], co[2]))
+    # Aldo,L(2020)
 
     polygon = list(results)
     len_polygon = len(polygon)
@@ -133,6 +135,7 @@ def main():
         # points inside the polygon
         else:
             return 'inside'
+        # Mian, Q.(2021).
 
     print('write output.csv')
     arr = []
@@ -201,3 +204,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
